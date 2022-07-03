@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`FormInput props, slots & events > renders component 1`] = `
+"<div class=\\"form-input\\">
+  <div class=\\"form-input__field\\">
+    <!--v-if--><label for=\\"full-email\\" class=\\"form-input__wrapper\\">
+      <!--v-if--><input id=\\"full-email\\" accept=\\"\\" autocomplete=\\"username email\\" class=\\"form-input__input\\" name=\\"email\\" pattern=\\"[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,}$\\" type=\\"email\\" data-test=\\"form-input__input\\"><span class=\\"form-input__label\\" data-test=\\"form-input__label\\">E-mail</span>
+    </label>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;

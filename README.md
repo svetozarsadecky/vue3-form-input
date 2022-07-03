@@ -1,20 +1,20 @@
-# @odyzeo/form-item
+# Vue 3 Form-input
 
-Simple input and textarea Vue.js component.
+Simple input and textarea for Vue 3 projects.
 
-<a href="https://form-item.vercel.app/" target="_blank">Demo</a>
+<a href="https://form-input.vercel.app/" target="_blank">Demo</a>
 
 ## Installation
 
 ### npm
 
 ```
-npm install @odyzeo/form-item
+npm install form-input
 ```
 
 Import and register component:
 ```
-import FormItemPlugin, { FormErrors, FormItem, TextareaAutoresize }  from '@odyzeo/form-item';
+import FormItemPlugin, { FormErrors, FormItem, TextareaAutoresize }  from 'form-input';
 
 Vue.use(FormItemPlugin, options);
 // Vue.component('FormItem', FormItem); // Installed w/ FormItemPlugin
@@ -24,7 +24,7 @@ Vue.directive('textarea-autoresize', TextareaAutoresize);
 
 Import styles or make your own:
 ```
-import '@odyzeo/form-item/dist/form-item.css';
+import 'form-input/dist/form-input.css';
 ```
 
 ## Usage
@@ -32,36 +32,36 @@ import '@odyzeo/form-item/dist/form-item.css';
 ```vue
 <template>
   <div>
-      <form-item
+      <form-input
         :input="simple"
         v-model="simple.value"
-      ></form-item>
+      ></form-input>
       
-      <form-item
+      <form-input
         :input="full"
         v-model="full.value"      
         :form-errors="formErrors.full"
-        class="form-item--group"
+        class="form-input--group"
         :bind-to-input="{ 'data-hj-whitelist': true }"
         :trans="toUpperCase"
         input-class="custom-class-for-input"
-        group-name="form-item-form-test"
+        group-name="form-input-form-test"
       >
         <template slot="prepend">
-          <div class="form-item__readonly">Your</div>
+          <div class="form-input__readonly">Your</div>
         </template>
         <template slot="append">
-          <div class="form-item__readonly">Please</div>
+          <div class="form-input__readonly">Please</div>
         </template>
-      </form-item>
+      </form-input>
 
-      <form-item
+      <form-input
           :ref="textarea.name"
           v-model="textarea.value"
           v-textarea-autoresize:window="{ max: 200 }"
           :input="textarea"
           :trans="customTranslate"
-      ></form-item>
+      ></form-input>
 
       <form-errors
           :form-errors="formErrors"
@@ -72,7 +72,7 @@ import '@odyzeo/form-item/dist/form-item.css';
 
 ```vue
 <script>
-import FormItem from '@odyzeo/form-item'
+import FormItem from 'form-input'
 
 export default {
     name: 'App',
@@ -132,8 +132,8 @@ export default {
 ## Plugin options
 | Property name  | Type     | Default value  | Description                                              |
 | -------------- | -------- | -------------- | -------------------------------------------------------- |
-| `className`    | String   | 'form-item'    | Set component block className (set B in BEM)             |
-| `componentName`| String   | 'form-item'    | Set component name                                       |
+| `className`    | String   | 'form-input'    | Set component block className (set B in BEM)             |
+| `componentName`| String   | 'form-input'    | Set component name                                       |
 | `trans`        | function | `(key) => key` | Enable translating or modifying labels and placeholders. |
 
 ### Example using vui-i18n

@@ -15,12 +15,12 @@
 @color--border: #50bccb;
 @color--lighter-grey: #e6e6e6;
 
-.form-item {
+.form-input {
     border-radius: @input-radius;
     font-size: 16px;
 }
 
-.form-item__field {
+.form-input__field {
     position: relative;
     background: @form-input-background--light;
     border-radius: @input-radius;
@@ -28,7 +28,7 @@
     transition: border .2s ease;
 }
 
-.form-item__input {
+.form-input__input {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -59,7 +59,7 @@
     }
 }
 
-.form-item__label {
+.form-input__label {
     display: block;
     box-sizing: border-box;
     position: absolute;
@@ -71,22 +71,22 @@
     pointer-events: none;
 }
 
-.form-item__input:focus + .form-item__label,
-.form-item--filled .form-item__label,
-.form-item--tags .form-item__label {
+.form-input__input:focus + .form-input__label,
+.form-input--filled .form-input__label,
+.form-input--tags .form-input__label {
     top: 10px;
     font-size: 12px;
     color: @form-label-color--dark;
 }
 
-.form-item--filled .form-item__field {
+.form-input--filled .form-input__field {
     border-color: @color--border;
 }
 
 /**
 * Fix autofill label
 */
-.form-item__input:-webkit-autofill + .form-item__label {
+.form-input__input:-webkit-autofill + .form-input__label {
     top: 10px;
     font-size: 12px;
     color: @form-label-color--dark;
@@ -95,17 +95,17 @@
 /**
 * Input label modifier
 */
-.form-item--no-label {
-    .form-item__input {
+.form-input--no-label {
+    .form-input__input {
         padding: 20px 10px;
     }
 }
 
-.form-item__field:focus-within {
+.form-input__field:focus-within {
     border-color: @color--focus;
 }
 
-.form-item__error {
+.form-input__error {
     padding: 3px 3px 0;
     color: @color--danger;
     font-size: @font-size--xsmall;
@@ -115,7 +115,7 @@
 /**
 * Hider used for description label
 */
-.form-item__hider {
+.form-input__hider {
     position: absolute;
     top: 0;
     right: 0;
@@ -132,20 +132,20 @@
 /**
 * Form error state
 */
-.form-item--error {
-    .form-item__field {
+.form-input--error {
+    .form-input__field {
         border-color: @color--danger;
     }
 }
 
-.form-item--group {
-    .form-item__field {
+.form-input--group {
+    .form-input__field {
         display: flex;
         overflow: hidden;
     }
 }
 
-.form-item__readonly {
+.form-input__readonly {
     background: @form-input-color--light;
     display: flex;
     justify-content: center;
@@ -158,19 +158,19 @@
     line-height: 1;
 }
 
-.form-item--disabled {
+.form-input--disabled {
     opacity: .5;
 }
 
-.form-item__wrapper {
+.form-input__wrapper {
     position: relative;
     display: block;
     flex: 1 1 auto;
 }
 
-.form-item--hidden {
+.form-input--hidden {
 
-    .form-item__field {
+    .form-input__field {
         display: none;
     }
 }
