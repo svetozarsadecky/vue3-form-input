@@ -2,7 +2,7 @@
 
 Simple input and textarea for Vue 3 projects.
 
-<a href="https://form-input.vercel.app/" target="_blank">Demo</a>
+<a href="https://vue3-form-input.vercel.app/" target="_blank">Demo</a>
 
 ## Installation
 
