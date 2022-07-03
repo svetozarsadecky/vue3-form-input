@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`FormErrors > should render component in error state 1`] = `
+"<div class=\\"form-errors form-errors--is-error\\">
+  <ul>
+    <!--eslint-disable vue/no-v-html-->
+    <li class=\\"form-errors__error\\">error1</li>
+    <li class=\\"form-errors__error\\">error2</li>
+  </ul>
+</div>"
+`;
+
+exports[`FormErrors > should render component in success state 1`] = `
+"<div class=\\"form-errors\\">
+  <ul>
+    <!--eslint-disable vue/no-v-html-->
+  </ul>
+</div>"
+`;

@@ -1,0 +1,40 @@
+@import "systematize/normalize";
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 0 $mobile-container-padding;
+    margin: 0 auto;
+
+    @media (min-width: $break-t-min) {
+        padding: 0 $desktop-container-padding;
+    }
+
+    @media (min-width: $break-d-min) {
+        padding: 0 $desktop-container-padding;
+    }
+
+    @media (min-width: $container-width) {
+        width: 100%;
+        max-width: $dashboard--container-width;
+        padding: 0 $tablet-container-padding;
+    }
+}
